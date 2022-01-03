@@ -4,7 +4,7 @@
 DIR_CONFIG="/etc/v2ray"
 DIR_RUNTIME="/usr/bin"
 DIR_TMP="$(mktemp -d)"
-VER="v4.40.1"
+#VER="v4.40.1"
 # Write V2Ray configuration
 cat << EOF > ${DIR_TMP}/heroku.json
 {
@@ -31,7 +31,7 @@ cat << EOF > ${DIR_TMP}/heroku.json
 EOF
 
 # Get V2Ray executable release
-downloadurl="github.com/v2fly/v2ray-core/releases/${VER}/download/v2ray-linux-64.zip"
+downloadurl="github.com/v2fly/v2ray-core/releases/download/${VER}/v2ray-linux-64.zip"
 echo $downloadurl
 curl --retry 10 --retry-max-time 60 -H "Cache-Control: no-cache" -fsSL ${downloadurl} -o ${DIR_TMP}/v2ray_dist.zip
 busybox unzip ${DIR_TMP}/v2ray_dist.zip -d ${DIR_TMP}
