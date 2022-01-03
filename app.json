@@ -14,7 +14,15 @@
         "WSPATH": {
             "description": "WebSocket Path",
             "value": "/"
-        }
+        },
+        "PORT": {
+            "description": "PORT",
+            "value": "80"
+        },
+        "VER": {
+            "description": "Version",
+            "value": "v4.40.1"
+        } 
     },
     "website": "https://ibcl.us/Heroku-V2Ray_20191014/",
     "repository": "https://github.com/omroncn/iK3Ri4iULb",
